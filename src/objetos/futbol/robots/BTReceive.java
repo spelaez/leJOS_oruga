@@ -31,29 +31,17 @@ public class BTReceive {
 			DataOutputStream dos = btc.openDataOutputStream();
 			
 			for(int i=0;i<100;i++) {
-				char n = dis.readChar();
-				LCD.drawChar(n, 5, 5);
-				LCD.clear();
-				LCD.drawString("si llegue hasta aca", 0, 0);
-				try{
-				dos.writeChars("receptor"+n);
-				dos.flush();
-				}catch(IOException e){
-					LCD.clear();
-					LCD.drawString(e.getMessage(), 0, 0);
-				}
+				int n = dis.readInt();
+				LCD.drawInt(n, 5, 5);
 			}
-			LCD.drawString("Tratare de cerrar el dis", 0, 0);
 			Thread.sleep(2000);
 			dis.close();
-			LCD.drawString("Tratare de cerrar el dos", 0, 0);
 			Thread.sleep(2000);
 			dos.close();
 			Thread.sleep(2000); // wait for data to drain
 			LCD.clear();
 			LCD.drawString(closing,0,0);
 			LCD.refresh();
-			LCD.drawString("Tratare de cerrar la conexion", 0, 0);
 			Thread.sleep(2000);
 			btc.close();
 			LCD.clear();
