@@ -21,6 +21,7 @@ public class BTOruga {
 		String connected = "Conexion\n exitosa!!!";
         String waiting = "Esperando\n conexion...";
         String closing = "Cerrando\n conexion...";
+
         
         pilot.reset();
         Motor.C.resetTachoCount();
@@ -127,13 +128,13 @@ public class BTOruga {
 	}
 	public static void chutar() throws InterruptedException{
 		Motor.C.setSpeed(200);
-		Motor.C.rotateTo(-45);
-		Motor.C.rotateTo(-10);
+		Motor.C.rotateTo(-30);
+		Motor.C.rotateTo(-5);
 	}
 	public static void patear() throws InterruptedException{
 		Motor.C.setSpeed(400);
-		Motor.C.rotateTo(-100);
-		Motor.C.rotateTo(-10);
+		Motor.C.rotateTo(-40);
+		Motor.C.rotateTo(-5);
 	}
 	
 	public static void actualizarPosicion(int x, int y){
