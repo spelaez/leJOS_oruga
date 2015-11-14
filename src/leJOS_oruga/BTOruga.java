@@ -118,12 +118,12 @@ public class BTOruga {
 	}
 	public static void girarDerecha() throws InterruptedException{
 		pilot.setTravelSpeed(10);
-		pilot.rotate(-170);
+		pilot.rotate(-57);
 		actualizarGRotacion(45);
 	}
 	public static void girarIzquierda() throws InterruptedException{
 		pilot.setTravelSpeed(10);
-		pilot.rotate(170);
+		pilot.rotate(57);
 		actualizarGRotacion(-45);
 	}
 	public static void chutar() throws InterruptedException{
